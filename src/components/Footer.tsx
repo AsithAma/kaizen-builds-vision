@@ -1,14 +1,14 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-950 text-white py-12">
+    <footer className="bg-zinc-950 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-[#54a9f2] rounded-lg flex items-center justify-center">
-                <span className="text-slate-900 font-bold text-xl">K</span>
+                <span className="text-black font-bold text-xl">K</span>
               </div>
               <div>
                 <h3 className="text-xl font-bold">Kaizen Construction</h3>
@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-8 pt-8 text-center">
+        <div className="border-t border-zinc-800 mt-8 pt-8 text-center">
           <p className="text-slate-500">
             © 2024 Kaizen Construction & Development. All rights reserved.
           </p>
