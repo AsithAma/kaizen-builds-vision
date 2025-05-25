@@ -49,13 +49,13 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Our Team
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Meet the experienced professionals who bring your construction projects to life
           </p>
         </div>
@@ -64,7 +64,7 @@ const TeamSection = () => {
           {teamMembers.map((member, index) => (
             <Card
               key={index}
-              className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 overflow-hidden bg-white"
+              className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 overflow-hidden bg-slate-700 hover:bg-slate-600"
             >
               <div className="relative h-80 overflow-hidden">
                 <img
@@ -75,14 +75,14 @@ const TeamSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-xl font-bold">{member.name}</h3>
-                  <p className="text-[#cf1e26] font-medium">{member.title}</p>
+                  <p className="text-[#54a9f2] font-medium">{member.title}</p>
                   {member.subtitle && (
                     <p className="text-sm opacity-90">{member.subtitle}</p>
                   )}
                 </div>
               </div>
               <CardContent className="p-6">
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-slate-300 leading-relaxed">
                   {member.bio}
                 </p>
               </CardContent>

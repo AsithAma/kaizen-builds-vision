@@ -27,7 +27,7 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-lg" 
+          ? "bg-slate-800/95 backdrop-blur-md shadow-lg border-b border-slate-700" 
           : "bg-transparent"
       }`}
     >
@@ -35,14 +35,14 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-[#cf1e26] rounded-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform duration-300">
-              <span className="text-white font-bold text-xl">K</span>
+            <div className="w-10 h-10 bg-[#54a9f2] rounded-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform duration-300">
+              <span className="text-slate-900 font-bold text-xl">K</span>
             </div>
             <div>
-              <h1 className={`text-xl font-bold ${isScrolled ? "text-gray-900" : "text-white"} transition-colors duration-300`}>
+              <h1 className="text-xl font-bold text-white transition-colors duration-300">
                 Kaizen Construction
               </h1>
-              <p className={`text-sm ${isScrolled ? "text-gray-600" : "text-white/80"} transition-colors duration-300`}>
+              <p className="text-sm text-slate-300 transition-colors duration-300">
                 & Development
               </p>
             </div>
@@ -52,31 +52,25 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("home")}
-              className={`font-medium transition-all duration-300 hover:text-[#cf1e26] ${
-                isScrolled ? "text-gray-700" : "text-white"
-              }`}
+              className="font-medium transition-all duration-300 hover:text-[#54a9f2] text-white"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className={`font-medium transition-all duration-300 hover:text-[#cf1e26] ${
-                isScrolled ? "text-gray-700" : "text-white"
-              }`}
+              className="font-medium transition-all duration-300 hover:text-[#54a9f2] text-white"
             >
               About Us
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className={`font-medium transition-all duration-300 hover:text-[#cf1e26] ${
-                isScrolled ? "text-gray-700" : "text-white"
-              }`}
+              className="font-medium transition-all duration-300 hover:text-[#54a9f2] text-white"
             >
               Contact Us
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-[#cf1e26] hover:bg-[#b01922] text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+              className="bg-[#54a9f2] hover:bg-[#3b82f6] text-slate-900 px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Get Quote
             </Button>
@@ -88,9 +82,9 @@ const Navigation = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <div className="space-y-1">
-              <div className={`w-6 h-0.5 ${isScrolled ? "bg-gray-900" : "bg-white"} transition-all duration-300`}></div>
-              <div className={`w-6 h-0.5 ${isScrolled ? "bg-gray-900" : "bg-white"} transition-all duration-300`}></div>
-              <div className={`w-6 h-0.5 ${isScrolled ? "bg-gray-900" : "bg-white"} transition-all duration-300`}></div>
+              <div className="w-6 h-0.5 bg-white transition-all duration-300"></div>
+              <div className="w-6 h-0.5 bg-white transition-all duration-300"></div>
+              <div className="w-6 h-0.5 bg-white transition-all duration-300"></div>
             </div>
           </button>
         </div>
@@ -98,29 +92,29 @@ const Navigation = () => {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-t shadow-lg">
+        <div className="md:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700 shadow-lg">
           <div className="px-4 py-6 space-y-4">
             <button
               onClick={() => scrollToSection("home")}
-              className="block w-full text-left font-medium text-gray-700 hover:text-[#cf1e26] transition-colors duration-300"
+              className="block w-full text-left font-medium text-white hover:text-[#54a9f2] transition-colors duration-300"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="block w-full text-left font-medium text-gray-700 hover:text-[#cf1e26] transition-colors duration-300"
+              className="block w-full text-left font-medium text-white hover:text-[#54a9f2] transition-colors duration-300"
             >
               About Us
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="block w-full text-left font-medium text-gray-700 hover:text-[#cf1e26] transition-colors duration-300"
+              className="block w-full text-left font-medium text-white hover:text-[#54a9f2] transition-colors duration-300"
             >
               Contact Us
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="w-full bg-[#cf1e26] hover:bg-[#b01922] text-white rounded-full"
+              className="w-full bg-[#54a9f2] hover:bg-[#3b82f6] text-slate-900 rounded-full"
             >
               Get Quote
             </Button>

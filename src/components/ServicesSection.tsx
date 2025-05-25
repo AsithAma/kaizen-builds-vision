@@ -24,13 +24,13 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             From pre-construction planning to final completion, we deliver excellence in every phase of your project.
           </p>
         </div>
@@ -39,7 +39,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 overflow-hidden"
+              className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 overflow-hidden bg-slate-700 hover:bg-slate-600"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -53,12 +53,12 @@ const ServicesSection = () => {
                 </div>
               </div>
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-900 group-hover:text-[#cf1e26] transition-colors duration-300">
+                <CardTitle className="text-2xl text-white group-hover:text-[#54a9f2] transition-colors duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-slate-300 leading-relaxed">
                   {service.description.substring(0, 200)}...
                 </p>
               </CardContent>

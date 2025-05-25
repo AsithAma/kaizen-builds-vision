@@ -48,13 +48,13 @@ const GallerySection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Project Gallery
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Explore our portfolio of completed projects showcasing quality craftsmanship and attention to detail
           </p>
         </div>
@@ -73,7 +73,7 @@ const GallerySection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-sm font-medium text-[#cf1e26]">{image.category}</p>
+                <p className="text-sm font-medium text-[#54a9f2]">{image.category}</p>
                 <p className="text-sm">{image.alt}</p>
               </div>
             </div>
@@ -92,7 +92,7 @@ const GallerySection = () => {
               className="max-w-full max-h-full object-contain rounded-lg"
             />
             <button
-              className="absolute top-4 right-4 text-white text-4xl hover:text-[#cf1e26] transition-colors duration-300"
+              className="absolute top-4 right-4 text-white text-4xl hover:text-[#54a9f2] transition-colors duration-300"
               onClick={() => setSelectedImage(null)}
             >
               ×

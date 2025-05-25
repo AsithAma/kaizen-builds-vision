@@ -55,7 +55,7 @@ const HeroSection = () => {
               alt={slide.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/50"></div>
+            <div className="absolute inset-0 bg-black/60"></div>
           </div>
         ))}
       </div>
@@ -72,14 +72,14 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
             <Button
               onClick={scrollToServices}
-              className="bg-[#cf1e26] hover:bg-[#b01922] text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-xl"
+              className="bg-[#54a9f2] hover:bg-[#3b82f6] text-slate-900 px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-xl"
             >
               Our Services
             </Button>
             <Button
               variant="outline"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
+              className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
             >
               Get Quote
             </Button>
@@ -95,7 +95,7 @@ const HeroSection = () => {
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide 
-                ? "bg-[#cf1e26] scale-125" 
+                ? "bg-[#54a9f2] scale-125" 
                 : "bg-white/50 hover:bg-white/75"
             }`}
           />
@@ -106,7 +106,7 @@ const HeroSection = () => {
       <div className="absolute bottom-8 right-8 animate-bounce">
         <button
           onClick={scrollToServices}
-          className="text-white hover:text-[#cf1e26] transition-colors duration-300"
+          className="text-white hover:text-[#54a9f2] transition-colors duration-300"
         >
           <ChevronDown className="w-8 h-8" />
         </button>
