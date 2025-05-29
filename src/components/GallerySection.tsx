@@ -1,47 +1,56 @@
-
 import { useState } from "react";
+
+// Import gallery images
+import g1Image from "/src/Assets/G1.jpg";
+import g2Image from "/src/Assets/G2.jpg";
+import g3Image from "/src/Assets/G3.jpg";
+import g4Image from "/src/Assets/G4.jpg";
+import g5Image from "/src/Assets/G5.jpg";
+import g6Image from "/src/Assets/G6.jpg";
+import g7Image from "/src/Assets/G7.jpg";
+import g8Image from "/src/Assets/G8.jpg";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5",
+      src: g1Image,
       alt: "Commercial Construction Project",
       category: "Commercial"
     },
     {
-      src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+      src: g2Image,
       alt: "Office Building Construction",
       category: "Commercial"
     },
     {
-      src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
+      src: g3Image,
       alt: "Residential Home Construction",
       category: "Residential"
     },
     {
-      src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      src: g4Image,
       alt: "Pre-Construction Planning",
       category: "Pre-Construction"
     },
     {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      src: g5Image,
       alt: "Construction Site Management",
       category: "Commercial"
     },
     {
-      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      src: g6Image,
       alt: "Team Collaboration",
       category: "Team"
     },
     {
-      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      src: g7Image,
       alt: "Modern Office Construction",
       category: "Commercial"
     },
     {
-      src: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
+      src: g8Image,
       alt: "Residential Interior",
       category: "Residential"
     }
@@ -59,17 +68,17 @@ const GallerySection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl cursor-pointer hover:shadow-2xl transition-all duration-500"
+              className="group relative overflow-hidden rounded-xl cursor-pointer hover:shadow-2xl transition-all duration-500 aspect-square"
               onClick={() => setSelectedImage(image.src)}
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -86,17 +95,22 @@ const GallerySection = () => {
             className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
-            <img
-              src={selectedImage}
-              alt="Gallery image"
-              className="max-w-full max-h-full object-contain rounded-lg"
-            />
-            <button
-              className="absolute top-4 right-4 text-white text-4xl hover:text-[#54a9f2] transition-colors duration-300"
-              onClick={() => setSelectedImage(null)}
-            >
-              ×
-            </button>
+            <div className="relative max-w-4xl max-h-[80vh] w-full">
+              <img
+                src={selectedImage}
+                alt="Gallery image"
+                className="w-full h-full object-contain rounded-lg"
+              />
+              <button
+                className="absolute top-4 right-4 text-white text-4xl hover:text-[#54a9f2] transition-colors duration-300"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedImage(null);
+                }}
+              >
+                ×
+              </button>
+            </div>
           </div>
         )}
       </div>

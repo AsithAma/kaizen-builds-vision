@@ -1,6 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import logoImage from "/src/Assets/Kaizen Construction Logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,18 +34,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-[#54a9f2] rounded-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform duration-300">
-              <span className="text-slate-900 font-bold text-xl">K</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-white transition-colors duration-300">
-                Kaizen Construction
-              </h1>
-              <p className="text-sm text-slate-300 transition-colors duration-300">
-                & Development
-              </p>
-            </div>
+          <div className="flex items-center">
+            <img 
+              src={logoImage} 
+              alt="Kaizen Construction Logo" 
+              className="h-14 hover:scale-105 transition-transform duration-300"
+            />
           </div>
 
           {/* Desktop Navigation */}
