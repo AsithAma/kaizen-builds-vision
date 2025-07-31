@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaizen Construction & Development - Premier Construction Services</title>
-    <meta name="description" content="Kaizen Construction & Development - Leading construction company in Eastern Washington specializing in commercial, residential, and pre-construction services." />
-    <meta name="author" content="Kaizen Construction & Development" />
-    
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
-    
-    <meta property="og:title" content="Kaizen Construction & Development - Premier Construction Services" />
-    <meta property="og:description" content="Leading construction company in Eastern Washington specializing in commercial, residential, and pre-construction services." />
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaizen Construction & Development - Premier Construction Services</title>
+  <meta name="description"
+    content="Kaizen Construction & Development - Leading construction company in Eastern Washington specializing in commercial, residential, and pre-construction services." />
+  <meta name="author" content="Kaizen Construction & Development" />
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
+  <meta property="og:title" content="Kaizen Construction & Development - Premier Construction Services" />
+  <meta property="og:description"
+    content="Leading construction company in Eastern Washington specializing in commercial, residential, and pre-construction services." />
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDFXmf10lit9JPVJKdQkEl-gx3GL26Qv_U",
+      authDomain: "kaizen-construction.firebaseapp.com",
+      projectId: "kaizen-construction",
+      storageBucket: "kaizen-construction.firebasestorage.app",
+      messagingSenderId: "893880104548",
+      appId: "1:893880104548:web:469b7d29c6f9e7b9459171",
+      measurementId: "G-8T1LWRJ859"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+</body>
+
 </html>

@@ -1,73 +1,131 @@
-# Welcome to your Lovable project
+# Kaizen Construction - Vision
 
-## Project info
+A modern, responsive website for Kaizen Construction showcasing their services, team, gallery, and contact information.
 
-**URL**: https://lovable.dev/projects/dbdeb56b-431a-4766-a202-1c35404b34fd
+## 🏗️ About
 
-## How can I edit this code?
+Kaizen Construction is a professional construction company dedicated to delivering high-quality construction services. This website serves as their digital presence, featuring:
 
-There are several ways of editing your application.
+- **Hero Section**: Eye-catching introduction with call-to-action
+- **Services Section**: Detailed overview of construction services offered
+- **About Section**: Company information and values
+- **Gallery Section**: Portfolio of completed projects
+- **Team Section**: Meet the construction professionals
+- **Contact Section**: Easy ways to get in touch
 
-**Use Lovable**
+## 🚀 Technologies Used
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/dbdeb56b-431a-4766-a202-1c35404b34fd) and start prompting.
+This project is built with modern web technologies:
 
-Changes made via Lovable will be committed automatically to this repo.
+- **React 18** - Frontend framework
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful and accessible UI components
+- **Radix UI** - Unstyled, accessible UI primitives
+- **Lucide React** - Beautiful icons
 
-**Use your preferred IDE**
+## 📦 Installation & Setup
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (version 18 or higher)
+- npm or yarn package manager
 
-Follow these steps:
+### Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository**
+   ```bash
+   git clone <your-repository-url>
+   cd kaizen-builds-vision
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+4. **Open your browser**
+   Navigate to `http://localhost:8080` to view the website
+
+## 🛠️ Available Scripts
+
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── ui/             # Reusable UI components (shadcn/ui)
+│   ├── AboutSection.tsx
+│   ├── ContactSection.tsx
+│   ├── Footer.tsx
+│   ├── GallerySection.tsx
+│   ├── HeroSection.tsx
+│   ├── Navigation.tsx
+│   ├── ServicesSection.tsx
+│   └── TeamSection.tsx
+├── assets/             # Images and static assets
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+├── pages/              # Page components
+└── main.tsx           # Application entry point
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Customization
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Adding New Team Members
 
-**Use GitHub Codespaces**
+1. Add team member photos to `src/assets/`
+2. Update the team data in `TeamSection.tsx`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Updating Gallery
 
-## What technologies are used for this project?
+1. Add project images to `src/assets/`
+2. Update the gallery data in `GallerySection.tsx`
 
-This project is built with:
+### Modifying Services
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Edit the services data in `ServicesSection.tsx` to reflect your current offerings.
 
-## How can I deploy this project?
+## 🌐 Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/dbdeb56b-431a-4766-a202-1c35404b34fd) and click on Share -> Publish.
+### Firebase Hosting (Recommended)
 
-## Can I connect a custom domain to my Lovable project?
+1. Install Firebase CLI:
+   ```bash
+   npm install -g firebase-tools
+   ```
 
-Yes, you can!
+2. Login to Firebase:
+   ```bash
+   firebase login
+   ```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+3. Initialize Firebase (if not already done):
+   ```bash
+   firebase init hosting
+   ```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+4. Build and deploy:
+   ```bash
+   npm run build
+   firebase deploy
+   ```
+
+### Other Deployment Options
+
+- **Vercel**: Connect your GitHub repository and deploy automatically
+- **Netlify**: Drag and drop the `dist` folder after building
+- **GitHub Pages**: Use GitHub Actions for automatic deployment
+
